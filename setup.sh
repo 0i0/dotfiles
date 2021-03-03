@@ -24,9 +24,9 @@ apps=(
     coreutils
     micro
 )
-brew install gnu-sed --with-default-names
 for app in "${apps[@]}"; do
     echo brew install "$app"
+    brew install "$app"
 done
 # Remove outdated versions from the cellar.
 brew cleanup
