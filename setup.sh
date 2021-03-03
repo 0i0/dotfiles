@@ -17,7 +17,7 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 apps=(
-    "gnu-sed --with-default-names"
+    gnu-sed
 	tmux
 	wget
 	zsh
@@ -31,6 +31,9 @@ for app in "${apps[@]}"; do
 done
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# fix permissions
+compaudit | xargs chmod g-w,o-w
 
 ZSH=$HOME/.oh-my-zsh
 echo " -- oh my zsh -- "
