@@ -10,12 +10,13 @@ if [[ $? != 0 ]] ; then
 fi
 # Ask for the administrator password upfront
 sudo -v
+# allow software form unknowen developers
+sudo spctl --master-disable
 # Make sure we’re using the latest Homebrew.
 brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 apps=(
-    git
     "gnu-sed --with-default-names"
 	tmux
 	wget
@@ -85,5 +86,3 @@ if [[ \$- == *i* ]]; then
     zsh -l
 fi
 EndOfMessage
-
-chsh -s /bin/zsh $USER
