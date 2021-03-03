@@ -81,6 +81,7 @@ cd ..
 
 git clone git@github.com:0i0/banana-blueberry-themes.git ~/.banana-blueberry-themes
 cd ~/.banana-blueberry-themes
+mkdir -p $HOME/.config/micro/colorschemes
 ln -sf $PWD/micro/bananablueberry.micro $HOME/.config/micro/colorschemes/bananablueberry.micro
 
 grep -Fq "export SHELL=zsh" $HOME/.bashrc && echo "zsh already default" || cat >> $HOME/.bashrc << EndOfMessage
