@@ -29,7 +29,7 @@ function dssh() {
     if [ "$2" = "" ]; then
         2="/bin/sh"
     fi
-    docker exec -it $(docker ps | grep $1 | sed 's/ .*//') $2
+    docker exec -it $(docker ps | grep $1 | sed 's/ .*//') /bin/sh -c "$2"
 }
 
 # Directory listing
