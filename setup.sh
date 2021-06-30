@@ -47,11 +47,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 #0i0 theme
 rm -rf ~/.oh-my-zsh/themes
-git clone git@github.com:0i0/0i0.zsh-theme.git ~/.oh-my-zsh/themes
+git clone https://github.com/0i0/0i0.zsh-theme.git ~/.oh-my-zsh/themes
 
 cd "$(dirname "${BASH_SOURCE}")"
 git init
-git remote add origin git@github.com:0i0/dotfiles.git
+git remote add origin https://github.com/0i0/dotfiles.git
 git fetch --all
 git reset --hard origin/master
 git pull --recurse-submodules origin master
@@ -74,12 +74,12 @@ done
 /usr/local/opt/coreutils/libexec/gnubin/cp -as $PWD/.config/ $HOME
 
 # alacritty
-git clone git@github.com:0i0/0i0-alacritty.git ~/.0i0-alacritty
+git clone https://github.com/0i0/0i0-alacritty.git ~/.0i0-alacritty
 cd ~/.0i0-alacritty
 ./install.sh
 cd ..
 
-git clone git@github.com:0i0/banana-blueberry-themes.git ~/.banana-blueberry-themes
+git clone https://github.com/0i0/banana-blueberry-themes.git ~/.banana-blueberry-themes
 cd ~/.banana-blueberry-themes
 mkdir -p $HOME/.config/micro/colorschemes
 ln -sf $PWD/micro/bananablueberry.micro $HOME/.config/micro/colorschemes/bananablueberry.micro
